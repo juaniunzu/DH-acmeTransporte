@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public abstract class Vehiculo {
 
-  private ArrayList<Pasajero> pasajeros;
-  private Integer asientos;
+  protected ArrayList<Pasajero> pasajeros;
+  protected Integer asientos;
 
   public Vehiculo(Integer asientos) {
     this.asientos = asientos;
@@ -18,6 +18,7 @@ public abstract class Vehiculo {
     if(this.asientos > 0){
       pasajeros.add(unPasajero);
       this.asientos--;
+      System.out.println("Se sube " + unPasajero.getNombre() + " al vehiculo");
     } else {
       System.out.println("El vehículo está completo y no puede subir más pasajeros");
     }

@@ -1,13 +1,13 @@
 package com.company;
 
-import java.util.HashSet;
-
 public class Pasajero implements Registrable {
 
   private Boolean vaParado;
+  private String nombre;
 
-  public Pasajero(Boolean vaParado) {
+  public Pasajero(Boolean vaParado, String nombre) {
     this.vaParado = vaParado;
+    this.nombre = nombre;
   }
 
   @Override
@@ -17,5 +17,9 @@ public class Pasajero implements Registrable {
 
   public Boolean getVaParado() {
     return vaParado;
+  }
+
+  public String getNombre() {
+    return nombre;
   }
 }
