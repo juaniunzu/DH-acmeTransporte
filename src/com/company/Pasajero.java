@@ -12,7 +12,7 @@ public class Pasajero implements Registrable {
 
   @Override
   public void registrar() {
-    //todo
+    System.out.println("Se ha registrado al pasajero");
   }
 
   public Boolean getVaParado() {

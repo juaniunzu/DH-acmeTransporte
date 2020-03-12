@@ -1,29 +1,32 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class GrupoPasajeros implements Registrable {
 
-  private HashSet<Pasajero> pasajerosEnGrupo;
+  private ArrayList<Pasajero> pasajerosEnGrupo;
 
   public GrupoPasajeros() {
-    this.pasajerosEnGrupo = new HashSet<Pasajero>();
+    this.pasajerosEnGrupo = new ArrayList<Pasajero>();
   }
 
-  public HashSet<Pasajero> getPasajerosEnGrupo() {
+  public ArrayList<Pasajero> getPasajerosEnGrupo() {
     return pasajerosEnGrupo;
   }
 
   public void agregarAlGrupo(Pasajero unPasajero){
-    //todo
+    this.pasajerosEnGrupo.add(unPasajero);
   }
 
   public void sacarDelGrupo(Pasajero unPasajero){
-    //todo
+    this.pasajerosEnGrupo.remove(unPasajero);
   }
 
   @Override
   public void registrar() {
-    //todo
+    for (Pasajero pasajero : pasajerosEnGrupo) {
+      System.out.println("Se ha registrado al pasajero del grupo");
+    }
   }
 }

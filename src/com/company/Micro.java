@@ -9,6 +9,21 @@ public class Micro extends Vehiculo {
     this.plazasParados = plazasParados;
   }
 
+  @Override
+  public void subirGrupo(GrupoPasajeros unGrupo) {
+    //todo
+  }
+
+  @Override
+  public void bajarPasajero(Pasajero unPasajero) {
+    //todo
+  }
+
+  @Override
+  public void subirPasajero(Pasajero unPasajero) {
+    //todo
+  }
+
   public Integer getPlazasParados() {
     return plazasParados;
   }
